@@ -111,7 +111,7 @@ def load_rows(path):
     '''Develop a way to inform the user about the status of the data ingestion without using a
     polling solution.'''
     total_rows = get_row_count()
-    STATUS_EVERY = total_rows/100 # 1 pct
+    STATUS_EVERY = 10
 
     for i,r in enumerate(get_rows(), start=1):
         if not i % STATUS_EVERY:
